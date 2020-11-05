@@ -1,0 +1,68 @@
+﻿<Window x:Class="Uygulama3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Uygulama3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="7*" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" Margin="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Content="Ziyaretçi Adı:" FontSize="12"></Label>
+                <TextBox x:Name="tbZiyaretciAdi" Grid.Column="1"  Margin="3"/>
+            </Grid>
+            <Grid Grid.Row="1" Margin="3">
+                <StackPanel Orientation="Horizontal">
+                    <RadioButton x:Name="RbSabah" Content="Sabah" FontSize="12" Margin="3"/>
+                    <RadioButton x:Name="RbOglen" Content="Öğlen" FontSize="12" Margin="3"/>
+                    <RadioButton x:Name="RbAksam" Content="Aksam" FontSize="12" Margin="3"/>
+                </StackPanel>
+            </Grid>
+            <CheckBox x:Name="CbVipMi" Grid.Row="2" Content="Vip ziyaretçi" FontSize="12"  Margin="3"/>
+            <WrapPanel Orientation="Horizontal" VerticalAlignment="Center" Width="150" Grid.Row="3">
+                <Button x:Name="Btn1" Content="1" Click="BtnSayi_Click" Height="50" Width="50" />
+                <Button x:Name="Btn2" Content="2" Click="BtnSayi_Click" Height="50" Width="50"  />
+                <Button x:Name="Btn3" Content="3" Click="BtnSayi_Click" Height="50" Width="50"  />
+                <Button x:Name="Btn4" Content="4" Click="BtnSayi_Click" Height="50" Width="50"  />
+                <Button x:Name="Btn5" Content="5" Click="BtnSayi_Click" Height="50" Width="50"  />
+                <Button x:Name="Btn6" Content="6" Click="BtnSayi_Click" Height="50" Width="50"  />
+                <Button x:Name="Btn7" Content="7" Click="BtnSayi_Click" Height="50" Width="50"  />
+                <Button x:Name="Btn8" Content="8" Click="BtnSayi_Click" Height="50" Width="50"  />
+                <Button x:Name="Btn9" Content="9" Click="BtnSayi_Click" Height="50" Width="50"  />
+                <Button x:Name="Btn0" Content="0" Click="BtnSayi_Click" Height="50" Width="50"  />
+            </WrapPanel>
+            <Button x:Name="BtnEkle" Grid.Row="4" Content="Ekle" FontSize="18pt" Click="BtnEkle_Click" Margin="3">
+            </Button>
+        </Grid>
+        <Grid Grid.Column="1" Margin="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="10*"/>
+            </Grid.RowDefinitions>
+            <TextBox x:Name="TbAra" Grid.Row="0" TextChanged="TbAra_TextChanged"  Margin="3" />
+            <ComboBox x:Name="CmbZaman" Grid.Row="1"  Margin="3">
+                <ComboBoxItem Content="Sabah"/>
+                <ComboBoxItem Content="Öğlen"/>
+                <ComboBoxItem Content="Akşam"/>
+            </ComboBox>
+            <ListBox x:Name="LbZiyaretciler" Grid.Row="2"  Margin="3" />
+        </Grid>
+    </Grid>
+</Window>
