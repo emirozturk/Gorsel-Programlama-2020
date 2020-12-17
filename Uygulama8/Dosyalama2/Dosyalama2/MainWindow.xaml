@@ -1,0 +1,19 @@
+﻿<Window x:Class="Dosyalama2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Dosyalama2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <ComboBox x:Name="CmbSuruculer" Grid.Row="0" Margin="3" SelectionChanged="CmbSuruculer_SelectionChanged" />
+        <ListBox x:Name="LbKlasorler" Grid.Row="1" Margin="3" MouseDoubleClick="LbKlasorler_MouseDoubleClick" SelectionChanged="LbKlasorler_SelectionChanged"/>
+        <ListBox x:Name="LbDosyalar" Grid.Row="2" Margin="3" MouseDoubleClick="LbDosyalar_MouseDoubleClick"/>
+    </Grid>
+</Window>
