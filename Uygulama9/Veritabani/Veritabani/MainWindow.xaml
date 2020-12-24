@@ -1,0 +1,36 @@
+﻿<Window x:Class="Veritabani.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Veritabani"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition />
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="500"/>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Label Content="Sanatçı Adı:" Grid.Column="0" Margin="3"/>
+            <TextBox x:Name="TbSanatciAdi" Grid.Column="1" Margin="3"/>
+            <Button x:Name="BtnSanatciEkle" Content="Ekle" Grid.Column="2" Margin="3" Click="BtnSanatciEkle_Click"/>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+        </Grid>
+        <ListBox x:Name="LbSanatcilar" Grid.Row="2" Margin="3" SelectionChanged="LbSanatcilar_SelectionChanged"/>
+        <Button x:Name="BtnSil" Content="Sil" Margin="3" Grid.Row="3" Click="BtnSil_Click" />
+    </Grid>
+</Window>
