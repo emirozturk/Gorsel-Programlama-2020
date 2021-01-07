@@ -1,0 +1,21 @@
+﻿<Window x:Class="Uygulama11_2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Uygulama11_2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <WrapPanel x:Name="WpBilesenler" Grid.Row="0" />
+        <StackPanel Grid.Row="1" HorizontalAlignment="Left" Orientation="Horizontal">
+            <TextBox x:Name="TbToplam" Width="400"  Margin="3"/>
+            <Button x:Name="BtnTemizle" Content="Temizle" Margin="3" Click="BtnTemizle_Click"/>
+        </StackPanel>
+        
+    </Grid>
+</Window>
