@@ -1,0 +1,23 @@
+﻿<Window x:Class="Uygulama12.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Uygulama12"
+        mc:Ignorable="d"
+        Title="Uygulama12" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Label Content="Eklenecek" FontSize="16" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center"/>
+        <Label Content="Eklenen" FontSize="16" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" />
+        <ListBox x:Name="LbEklenecek" Grid.Row="1" Grid.Column="0" Margin="3 10 5 10" ButtonBase.Click="LbEklenecek_Click"/>
+        <ListBox x:Name="LbEklenen" Grid.Row="1" Grid.Column="1" Margin="5 10 3 10" ButtonBase.Click="LbEklenen_Click" />
+    </Grid>
+</Window>
